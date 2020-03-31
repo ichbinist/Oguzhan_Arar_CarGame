@@ -127,7 +127,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7566158054768157162}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &199950013
+--- !u!114 &199950016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -446,7 +446,7 @@ PrefabInstance:
     - target: {fileID: 4096783662119568132, guid: 5824bab56a8d3c447ae32ee06ea2ccd4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 70.051735
+      value: 69.52
       objectReference: {fileID: 0}
     - target: {fileID: 4096783662119568132, guid: 5824bab56a8d3c447ae32ee06ea2ccd4,
         type: 3}
@@ -461,7 +461,7 @@ PrefabInstance:
     - target: {fileID: 4096783662119568132, guid: 5824bab56a8d3c447ae32ee06ea2ccd4,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.95225155
+      value: -0.86517274
       objectReference: {fileID: 0}
     - target: {fileID: 4096783662119568132, guid: 5824bab56a8d3c447ae32ee06ea2ccd4,
         type: 3}
@@ -471,7 +471,7 @@ PrefabInstance:
     - target: {fileID: 4096783662119568132, guid: 5824bab56a8d3c447ae32ee06ea2ccd4,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.30531466
+      value: -0.501474
       objectReference: {fileID: 0}
     - target: {fileID: 4096783662119568132, guid: 5824bab56a8d3c447ae32ee06ea2ccd4,
         type: 3}
@@ -486,7 +486,7 @@ PrefabInstance:
     - target: {fileID: 4096783662119568132, guid: 5824bab56a8d3c447ae32ee06ea2ccd4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -144.44601
+      value: -240.19499
       objectReference: {fileID: 0}
     - target: {fileID: 4096783662119568132, guid: 5824bab56a8d3c447ae32ee06ea2ccd4,
         type: 3}
@@ -719,7 +719,7 @@ PrefabInstance:
     - target: {fileID: 4262389402242553976, guid: 9e20577453b69c1468452e6190fee554,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 70.051735
+      value: 69.55
       objectReference: {fileID: 0}
     - target: {fileID: 4262389402242553976, guid: 9e20577453b69c1468452e6190fee554,
         type: 3}
@@ -770,6 +770,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FinishZone (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729988750656614468, guid: 9e20577453b69c1468452e6190fee554,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 21.54
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e20577453b69c1468452e6190fee554, type: 3}
@@ -1197,11 +1202,6 @@ PrefabInstance:
       propertyPath: Button_Right
       value: 
       objectReference: {fileID: 585426991}
-    - target: {fileID: 7492865423206153805, guid: 91b1940b42264de4c8c78d74e6ae51d1,
-        type: 3}
-      propertyPath: isStarted
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91b1940b42264de4c8c78d74e6ae51d1, type: 3}
 --- !u!1001 &5556556153372290947

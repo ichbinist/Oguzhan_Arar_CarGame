@@ -13,19 +13,14 @@ public class GameController : MonoBehaviour
     private bool leftpressed = false;
     private bool rightpressed = false;
     public float movementSpeed = 2f;
-     private Quaternion targetRotation;
 
     void Start()
     {
         currentCar = 0;
         Cars[0].GetComponent<Car_Properties>().isPlayable = true;
-
-        targetRotation = Quaternion.identity;
-
-        //Button_Left.GetComponent<Button>().onClick.AddListener(Left_Turn);
-        //Button_Right.GetComponent<Button>().onClick.AddListener(Right_Turn);
-
     }
+
+    //CurrentCar's rotations.
     public void Left_Turn(){
             isStarted = true;
             leftpressed = true;
@@ -52,7 +47,7 @@ public class GameController : MonoBehaviour
             currentCar = i;
             break;
           }else{
-            Cars[i].GetComponent<Car_Properties>().isPlayable = false;
+            if(Cars[i].GetComponent<Car_Properties>().isPlayable == true){Cars[i].GetComponent<Car_Properties>().isPlayable = false; isStarted = false;}
                }}    //Araçları playable yapar araç dizisinde gezer
       Cars[currentCar].transform.position += Cars[currentCar].transform.forward * Time.deltaTime * movementSpeed;
       }else{//Süre durduğunda

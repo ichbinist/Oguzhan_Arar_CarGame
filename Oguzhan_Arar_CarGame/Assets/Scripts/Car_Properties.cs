@@ -17,18 +17,21 @@ public class Car_Properties : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
       if(isPlayable){Start_Zone.SetActive(true); Finish_Zone.SetActive(true);}else{Start_Zone.SetActive(false); Finish_Zone.SetActive(false);}
 
 
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Start"))
+    void OnTriggerEnter(Collider other){
+
+        if (other.CompareTag("FinishLine"))
         {
+            Debug.Log("Çarptı");
             isFinished=true;
         }
-    }
+
+}
+
 }

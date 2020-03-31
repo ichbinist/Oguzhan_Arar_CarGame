@@ -49,3 +49,6 @@ MonoBehaviour:
   - {fileID: 0}
   isStarted: 0
   MainCanvas: {fileID: 0}
+  Button_Left: {fileID: 0}
+  Button_Right: {fileID: 0}
+  movementSpeed: 5
