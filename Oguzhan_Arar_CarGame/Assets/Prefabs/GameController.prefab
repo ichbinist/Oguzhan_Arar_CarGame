@@ -43,4 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af122c645c8ca448840b859be317c37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cars: []
+  Cars:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  isStarted: 0
+  MainCanvas: {fileID: 0}
