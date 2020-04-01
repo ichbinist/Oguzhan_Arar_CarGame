@@ -15,14 +15,16 @@ public class GameController : MonoBehaviour
     public Button Button_Right;
     private bool leftpressed = false;
     private bool rightpressed = false;
-    public float movementSpeed = 2f;
+    public float movementSpeed = 5;
     public float turnspeed = 1f;
 
     void Start()
     {
         currentCar = 0;
-        Cars[0].GetComponent<Car_Properties>().isPlayable = true;
-      UIVisibility(true,false);
+        Cars[currentCar].gameObject.GetComponent<Renderer>().enabled = true;
+        Cars[currentCar].GetComponent<Car_Properties>().isPlayable = true;
+        UIVisibility(true,false);
+
     }
 
     //CurrentCar's rotations.
@@ -52,6 +54,7 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
+      Cars[currentCar].gameObject.GetComponent<Renderer>().enabled = true;
       if(isStarted){//Süre başldığında
 
         if(Cars[Cars.Length-1].GetComponent<Car_Properties>().isFinished == true){//Dizideki son araç hedefine ulaştıysa
@@ -66,6 +69,7 @@ public class GameController : MonoBehaviour
       for(int i = 0;i<Cars.Length;i++){ //Araçlar dizisinde gezer
           if(Cars[i].GetComponent<Car_Properties>().isFinished == false){ //bulunan araç yerine ulaşmamışsa onu oynanabilir yap ve şuanki araç verisini o aracın dizideki yeriyle eşitle
             Cars[i].GetComponent<Car_Properties>().isPlayable = true;
+
             currentCar = i;
             if(MainCanvas.GetComponent<Label_Controls>().timer <= 0 || Cars[i].GetComponent<Car_Properties>().engel == true){ //Araç bir yere çarptıysa veya süresi bittiyse
               isStarted = false;
@@ -79,8 +83,5 @@ public class GameController : MonoBehaviour
                }}
       Cars[currentCar].transform.position += Cars[currentCar].transform.forward * Time.deltaTime * movementSpeed; //Oyun başladıysa araç ileri gitmeye başlayacak
     }
-      }else{//Süre durduğunda
-            MainCanvas.GetComponent<Label_Controls>().timer = 10f; //Süreyi sıfırla
-           }
-    }
-}
+    }else{MainCanvas.GetComponent<Label_Controls>().timer = 10f;}//Süre durduğunda
+    }}

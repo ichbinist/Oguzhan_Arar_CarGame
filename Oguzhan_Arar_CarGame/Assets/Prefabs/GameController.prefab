@@ -51,4 +51,5 @@ MonoBehaviour:
   MainCanvas: {fileID: 0}
   Button_Left: {fileID: 0}
   Button_Right: {fileID: 0}
-  movementSpeed: 5
+  movementSpeed: 4
+  turnspeed: 1

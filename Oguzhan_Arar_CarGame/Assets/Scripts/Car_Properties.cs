@@ -10,30 +10,23 @@ public class Car_Properties : MonoBehaviour
   public bool isPlayable=false;
   public bool isFinished=false;
   public bool engel = false;
-
     void Start()
     {
+
         this.gameObject.GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.7f, 1f); //Araç renklerini rastgele seç
         reset();
+        this.gameObject.GetComponent<Renderer>().enabled = false;
     }
 
     void FixedUpdate()
     {
-      if(isPlayable){Start_Zone.SetActive(true); Finish_Zone.SetActive(true);}else{Start_Zone.SetActive(false); Finish_Zone.SetActive(false);}
+      if(isPlayable){Start_Zone.SetActive(true);Finish_Zone.SetActive(true);}else{Start_Zone.SetActive(false); Finish_Zone.SetActive(false);}
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("FinishLine"))
-        {
-            Debug.Log("Çarptı");
-            isFinished=true;
-        }
-        if (other.CompareTag("Engel"))
-        {
-            Debug.Log("Çarptı");
-            engel = true;
-        }
+        if (other.CompareTag("FinishLine")){isFinished=true;}
+        if (other.CompareTag("Engel")){engel = true;}
     }
 
 public void reset(){
