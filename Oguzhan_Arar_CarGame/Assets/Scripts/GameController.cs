@@ -18,6 +18,9 @@ public class GameController : MonoBehaviour
     {
         currentCar = 0;
         Cars[0].GetComponent<Car_Properties>().isPlayable = true;
+
+        MainCanvas.transform.Find("MainGameCanvas").gameObject.SetActive(true);
+        MainCanvas.transform.Find("finishScreen").gameObject.SetActive(false);
     }
 
     //CurrentCar's rotations.
@@ -39,19 +42,35 @@ public class GameController : MonoBehaviour
     void Update()
     {
       if(isStarted){//Süre başldığında
-        if(leftpressed){Cars[currentCar].transform.Rotate(-Vector3.up * movementSpeed*65f * Time.deltaTime);}
-        if(rightpressed){Cars[currentCar].transform.Rotate(Vector3.up * movementSpeed*65f * Time.deltaTime);}
-      for(int i = 0;i<Cars.Length;i++){
-          if(Cars[i].GetComponent<Car_Properties>().isFinished == false){
+
+        if(Cars[Cars.Length-1].GetComponent<Car_Properties>().isFinished == true){//Dizideki son araç hedefine ulaştıysa
+          Debug.Log("Game Finished"); isStarted = false; //Bölümü bitir.
+          MainCanvas.transform.Find("MainGameCanvas").gameObject.SetActive(false); //Oyun tuşlarını görünmez kıl
+          MainCanvas.transform.Find("finishScreen").gameObject.SetActive(true); //Bitiriş ekranını göster
+
+      }else{ //Dizideki son araç yerine ulaşmadıysa
+
+        if(leftpressed){Cars[currentCar].transform.Rotate(-Vector3.up * movementSpeed*65f * Time.deltaTime);} //Sol tuşa basıldıysa
+        if(rightpressed){Cars[currentCar].transform.Rotate(Vector3.up * movementSpeed*65f * Time.deltaTime);} //Sağ tuşa basıldıysa
+
+      for(int i = 0;i<Cars.Length;i++){ //Araçlar dizisinde gezer
+          if(Cars[i].GetComponent<Car_Properties>().isFinished == false){ //bulunan araç yerine ulaşmamışsa onu oynanabilir yap ve şuanki araç verisini o aracın dizideki yeriyle eşitle
             Cars[i].GetComponent<Car_Properties>().isPlayable = true;
             currentCar = i;
-            break;
+            if(MainCanvas.GetComponent<Label_Controls>().timer <= 0){
+              isStarted = false;
+              Cars[i].GetComponent<Car_Properties>().reset();
+            }
+            break; // Oynanacak araç bulunduğu için looptan çık
           }else{
-            if(Cars[i].GetComponent<Car_Properties>().isPlayable == true){Cars[i].GetComponent<Car_Properties>().isPlayable = false; isStarted = false;}
-               }}    //Araçları playable yapar araç dizisinde gezer
-      Cars[currentCar].transform.position += Cars[currentCar].transform.forward * Time.deltaTime * movementSpeed;
+            if(Cars[i].GetComponent<Car_Properties>().isPlayable == true) //Araç yerine ulaşmış ancak hala oynanabilir durumdaysa
+            {Cars[i].GetComponent<Car_Properties>().isPlayable = false; isStarted = false;}   //aracın oynanabilirliğini kaldır ve süreyi sıfırla
+
+               }}
+      Cars[currentCar].transform.position += Cars[currentCar].transform.forward * Time.deltaTime * movementSpeed; //Oyun başladıysa araç ileri gitmeye başlayacak
+    }
       }else{//Süre durduğunda
-            MainCanvas.GetComponent<Label_Controls>().timer = 10f;
+            MainCanvas.GetComponent<Label_Controls>().timer = 10f; //Süreyi sıfırla
            }
     }
 }

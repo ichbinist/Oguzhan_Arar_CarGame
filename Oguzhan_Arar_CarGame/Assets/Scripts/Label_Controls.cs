@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class Label_Controls : MonoBehaviour
 {
   public Text Time_Label;
@@ -11,7 +13,8 @@ public class Label_Controls : MonoBehaviour
   public GameObject MainController;
     void Start()
     {
-
+      Scene scene = SceneManager.GetActiveScene();
+      Scene_Label.text = scene.name;
     }
 
     // Update is called once per frame
@@ -22,5 +25,6 @@ public class Label_Controls : MonoBehaviour
       }
       Car_Label.text = ":" + (GameController.currentCar+1).ToString();
       Time_Label.text = timer.ToString("F");
+
     }
 }

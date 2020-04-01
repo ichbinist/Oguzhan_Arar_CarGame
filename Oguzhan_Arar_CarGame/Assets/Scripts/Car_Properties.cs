@@ -12,26 +12,28 @@ public class Car_Properties : MonoBehaviour
     void Start()
     {
         this.gameObject.GetComponent<Renderer>().material.SetColor("_Color", color);
-        gameObject.transform.position = Start_Zone.transform.position;
-        gameObject.transform.rotation = Start_Zone.transform.rotation;
+      reset();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
       if(isPlayable){Start_Zone.SetActive(true); Finish_Zone.SetActive(true);}else{Start_Zone.SetActive(false); Finish_Zone.SetActive(false);}
-
-
     }
 
-    void OnTriggerEnter(Collider other){
+    void OnTriggerEnter(Collider other)
+    {
 
         if (other.CompareTag("FinishLine"))
         {
             Debug.Log("Çarptı");
             isFinished=true;
         }
+    }
 
+public void reset(){
+  gameObject.transform.position = Start_Zone.transform.position;
+  gameObject.transform.rotation = Start_Zone.transform.rotation;
 }
 
 }
