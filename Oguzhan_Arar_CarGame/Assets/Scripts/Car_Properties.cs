@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Car_Properties : MonoBehaviour
 {
-  public Color color;
+  private Color color;
   public GameObject Start_Zone;
   public GameObject Finish_Zone;
   public bool isPlayable=false;
   public bool isFinished=false;
   public bool engel = false;
+
     void Start()
     {
-        this.gameObject.GetComponent<Renderer>().material.SetColor("_Color", color);
-      reset();
+        this.gameObject.GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.7f, 1f); //Araç renklerini rastgele seç
+        reset();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
       if(isPlayable){Start_Zone.SetActive(true); Finish_Zone.SetActive(true);}else{Start_Zone.SetActive(false); Finish_Zone.SetActive(false);}

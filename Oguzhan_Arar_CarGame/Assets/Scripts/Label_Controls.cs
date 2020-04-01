@@ -17,7 +17,7 @@ public class Label_Controls : MonoBehaviour
       Scene_Label.text = scene.name;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
       if(MainController.GetComponent<GameController>().isStarted == true){
