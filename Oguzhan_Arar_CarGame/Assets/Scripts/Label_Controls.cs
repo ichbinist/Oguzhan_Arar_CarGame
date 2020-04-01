@@ -11,7 +11,7 @@ public class Label_Controls : MonoBehaviour
   public Text Scene_Label;
   public Button btn_right;
   public Button btn_left;
-  public float timer = 10f;
+  public float timer = 15f;
 
 
   public GameObject MainController;

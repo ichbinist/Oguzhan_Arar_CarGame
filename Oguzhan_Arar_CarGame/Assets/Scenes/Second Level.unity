@@ -136,17 +136,17 @@ PrefabInstance:
     - target: {fileID: 325151939595284797, guid: 5662cc99c3df97b47bf78ba7c1dad918,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9620066
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 325151939595284797, guid: 5662cc99c3df97b47bf78ba7c1dad918,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.813986
+      value: -10.47
       objectReference: {fileID: 0}
     - target: {fileID: 325151939595284797, guid: 5662cc99c3df97b47bf78ba7c1dad918,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 325151939595284797, guid: 5662cc99c3df97b47bf78ba7c1dad918,
         type: 3}
@@ -161,7 +161,7 @@ PrefabInstance:
     - target: {fileID: 325151939595284797, guid: 5662cc99c3df97b47bf78ba7c1dad918,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8660254
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 325151939595284797, guid: 5662cc99c3df97b47bf78ba7c1dad918,
         type: 3}
@@ -171,7 +171,7 @@ PrefabInstance:
     - target: {fileID: 325151939595284797, guid: 5662cc99c3df97b47bf78ba7c1dad918,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 60
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 325151939595284797, guid: 5662cc99c3df97b47bf78ba7c1dad918,
         type: 3}
@@ -3640,6 +3640,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1410535668}
+    - target: {fileID: 2177121934067179886, guid: d00b9c1b078c15e4cbaaae7d6e5a6b98,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LevelChange
+      objectReference: {fileID: 0}
     - target: {fileID: 2622721797273856129, guid: d00b9c1b078c15e4cbaaae7d6e5a6b98,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3804,6 +3809,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5297091132702583447, guid: d00b9c1b078c15e4cbaaae7d6e5a6b98,
+        type: 3}
+      propertyPath: m_Text
+      value: NEXT LEVEL
       objectReference: {fileID: 0}
     - target: {fileID: 5788764701547817297, guid: d00b9c1b078c15e4cbaaae7d6e5a6b98,
         type: 3}

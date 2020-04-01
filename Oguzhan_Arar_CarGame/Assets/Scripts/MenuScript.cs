@@ -14,4 +14,7 @@ public class MenuScript : MonoBehaviour
   public void ReturnMainMenu(){
    SceneManager.LoadScene("MainMenu");
   }
+  public void LevelSelected(int level){
+    Application.LoadLevel(Application.loadedLevel+level);
+  }
 }

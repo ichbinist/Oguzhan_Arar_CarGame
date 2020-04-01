@@ -83,5 +83,5 @@ public class GameController : MonoBehaviour
                }}
       Cars[currentCar].transform.position += Cars[currentCar].transform.forward * Time.deltaTime * movementSpeed; //Oyun başladıysa araç ileri gitmeye başlayacak
     }
-    }else{MainCanvas.GetComponent<Label_Controls>().timer = 10f;}//Süre durduğunda
+    }else{MainCanvas.GetComponent<Label_Controls>().timer = 15f;}//Süre durduğunda
     }}
