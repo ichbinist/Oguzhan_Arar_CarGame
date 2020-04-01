@@ -12,6 +12,7 @@ public class PingPongBackground : MonoBehaviour
     {
         cam = GetComponent<Camera>();
         cam.clearFlags = CameraClearFlags.SolidColor;
+        color2 = new Color(0.75f,0.75f,0.75f,0.75f);
     }
 
     void Update()

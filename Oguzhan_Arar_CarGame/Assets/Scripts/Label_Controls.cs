@@ -8,7 +8,6 @@ public class Label_Controls : MonoBehaviour
 {
   public Text Time_Label;
   public Text Car_Label;
-  public Text Scene_Label;
   public Button btn_right;
   public Button btn_left;
   public float timer = 15f;
@@ -28,7 +27,6 @@ public class Label_Controls : MonoBehaviour
       Scene scene = SceneManager.GetActiveScene();
       Car_Label.text = ":" + (GameController.currentCar+1).ToString();
       Time_Label.text = timer.ToString("F");
-      Scene_Label.text = scene.name;
     }
     void Update()
     {
