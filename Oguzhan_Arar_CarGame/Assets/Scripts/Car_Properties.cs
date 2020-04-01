@@ -9,6 +9,7 @@ public class Car_Properties : MonoBehaviour
   public GameObject Finish_Zone;
   public bool isPlayable=false;
   public bool isFinished=false;
+  public bool engel = false;
     void Start()
     {
         this.gameObject.GetComponent<Renderer>().material.SetColor("_Color", color);
@@ -23,17 +24,22 @@ public class Car_Properties : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-
         if (other.CompareTag("FinishLine"))
         {
             Debug.Log("Çarptı");
             isFinished=true;
+        }
+        if (other.CompareTag("Engel"))
+        {
+            Debug.Log("Çarptı");
+            engel = true;
         }
     }
 
 public void reset(){
   gameObject.transform.position = Start_Zone.transform.position;
   gameObject.transform.rotation = Start_Zone.transform.rotation;
+  engel = false;
 }
 
 }

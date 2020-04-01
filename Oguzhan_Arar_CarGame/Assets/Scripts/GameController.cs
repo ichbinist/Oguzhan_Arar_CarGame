@@ -57,7 +57,7 @@ public class GameController : MonoBehaviour
           if(Cars[i].GetComponent<Car_Properties>().isFinished == false){ //bulunan araç yerine ulaşmamışsa onu oynanabilir yap ve şuanki araç verisini o aracın dizideki yeriyle eşitle
             Cars[i].GetComponent<Car_Properties>().isPlayable = true;
             currentCar = i;
-            if(MainCanvas.GetComponent<Label_Controls>().timer <= 0){
+            if(MainCanvas.GetComponent<Label_Controls>().timer <= 0 || Cars[i].GetComponent<Car_Properties>().engel == true){ //Araç bir yere çarptıysa veya süresi bittiyse
               isStarted = false;
               Cars[i].GetComponent<Car_Properties>().reset();
             }
