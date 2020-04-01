@@ -11,6 +11,8 @@ public class Label_Controls : MonoBehaviour
   public Text Scene_Label;
   public Button btn_right;
   public Button btn_left;
+  public Button restart;
+  public Button next;
   public float timer = 10f;
 
 
@@ -23,6 +25,8 @@ public class Label_Controls : MonoBehaviour
     void resize_btn(){
       btn_right.image.rectTransform.sizeDelta = new Vector2(Screen.height*0.25f, Screen.height*0.25f);
       btn_left.image.rectTransform.sizeDelta = new Vector2(Screen.height*0.25f, Screen.height*0.25f);
+      restart.image.rectTransform.sizeDelta = new Vector2(Screen.height*0.30f, Screen.height*0.18f);
+      next.image.rectTransform.sizeDelta = new Vector2(Screen.height*0.30f, Screen.height*0.18f);
     }
     void labelchange(){
       Scene scene = SceneManager.GetActiveScene();
