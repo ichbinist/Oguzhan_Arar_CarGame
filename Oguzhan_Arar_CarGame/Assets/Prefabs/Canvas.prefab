@@ -28,17 +28,17 @@ RectTransform:
   m_GameObject: {fileID: 3318293115715437798}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.8, y: 2.8, z: 2.8}
   m_Children:
   - {fileID: 7594427624937967011}
   m_Father: {fileID: 3016341527487509832}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 532.5, y: -360.33334}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -292, y: -63}
   m_SizeDelta: {x: 100, y: 70}
-  m_Pivot: {x: 0, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5457437833658936238
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -256,7 +256,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6950084935346001534}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: 3, z: 36}
+  m_LocalPosition: {x: -2, y: 3, z: 25}
   m_LocalScale: {x: 187.03775, y: 187.03775, z: 187.03775}
   m_Children: []
   m_Father: {fileID: 3016341527487509832}
@@ -429,15 +429,15 @@ RectTransform:
   m_GameObject: {fileID: 7369730371512513918}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.8, y: 2.8, z: 2.8}
   m_Children:
   - {fileID: 1743288978420486944}
   m_Father: {fileID: 3016341527487509832}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 864, y: -360.33334}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 295, y: -63}
   m_SizeDelta: {x: 100, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &261002739123766099
@@ -822,8 +822,6 @@ MonoBehaviour:
   Scene_Label: {fileID: 7566158053470737524}
   btn_right: {fileID: 7566158054250400197}
   btn_left: {fileID: 7566158054515660668}
-  restart: {fileID: 2177121934067179886}
-  next: {fileID: 5788764701547817297}
   timer: 8
   MainController: {fileID: 0}
 --- !u!1 &7566158054250400199

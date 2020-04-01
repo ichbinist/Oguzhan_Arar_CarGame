@@ -13,7 +13,7 @@ public class MainMenuSettings : MonoBehaviour
     }
 
     void resize_btn(){
-      start.image.rectTransform.sizeDelta = new Vector2(Screen.width*0.1f, Screen.height*0.06f);
+      start.image.rectTransform.sizeDelta = new Vector2(Screen.width*0.2f, Screen.height*0.12f);
       header.rectTransform.sizeDelta = new Vector2(Screen.width*0.40f, Screen.height*0.40f);
     }
 }
