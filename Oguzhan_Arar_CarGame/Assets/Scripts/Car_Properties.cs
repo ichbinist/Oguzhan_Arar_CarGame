@@ -10,10 +10,11 @@ public class Car_Properties : MonoBehaviour
   public bool isPlayable=false;
   public bool isFinished=false;
   public bool engel = false;
+  private GameObject menucarcontrol;
     void Start()
     {
-
-        this.gameObject.GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.7f, 1f); //Araç renklerini rastgele seç
+        menucarcontrol = GameObject.Find("Car_Model_Control");
+        this.gameObject.GetComponent<Renderer>().material.color = menucarcontrol.GetComponent<CarModelController>().Car_Color;
         reset();
         this.gameObject.GetComponent<Renderer>().enabled = false;
     }

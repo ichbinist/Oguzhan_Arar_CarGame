@@ -17,14 +17,14 @@ public class GameController : MonoBehaviour
     private bool rightpressed = false;
     public float movementSpeed = 5;
     public float turnspeed = 1f;
-
+    private float timercontrol;
     void Start()
     {
         currentCar = 0;
         Cars[currentCar].gameObject.GetComponent<Renderer>().enabled = true;
         Cars[currentCar].GetComponent<Car_Properties>().isPlayable = true;
         UIVisibility(true,false);
-
+        timercontrol = MainCanvas.GetComponent<Label_Controls>().timer;
     }
 
     //CurrentCar's rotations.
@@ -83,5 +83,5 @@ public class GameController : MonoBehaviour
                }}
       Cars[currentCar].transform.position += Cars[currentCar].transform.forward * Time.deltaTime * movementSpeed; //Oyun başladıysa araç ileri gitmeye başlayacak
     }
-    }else{MainCanvas.GetComponent<Label_Controls>().timer = 15f;}//Süre durduğunda
+    }else{MainCanvas.GetComponent<Label_Controls>().timer = timercontrol;}//Süre durduğunda
     }}
