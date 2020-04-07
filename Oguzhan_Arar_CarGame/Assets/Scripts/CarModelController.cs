@@ -17,8 +17,8 @@ public class CarModelController : MonoBehaviour
     }
 
     public void ColorChange(){
-        R = Random.Range(0, 255);
-        G = Random.Range(0, 255);
-        B = Random.Range(0, 255);
+        R = Random.Range(40, 255);
+        G = Random.Range(40, 255);
+        B = Random.Range(40, 255);
     }
 }
